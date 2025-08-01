@@ -47,24 +47,44 @@ export default function WidgetTestPage() {
 
         try {
             element.innerHTML = '<div style="padding: 20px; text-align: center;">🔄 Loading widget from API...</div>';
+            console.log('Starting API widget test...');
 
             // Fetch the widget JavaScript from our API route
+            console.log('Fetching from /api/widgets/hero...');
             const response = await fetch('/api/widgets/hero');
+            console.log('Response received:', response.status, response.statusText);
 
             if (!response.ok) {
                 throw new Error(`HTTP ${response.status}: ${response.statusText}`);
             }
 
             const widgetCode = await response.text();
+            console.log('Widget code received, length:', widgetCode.length);
+            console.log('First 200 chars:', widgetCode.substring(0, 200));
 
             // Execute the widget code (this is what WordPress plugin does)
             const script = document.createElement('script');
             script.textContent = widgetCode;
+
+            // Add error handling for script execution
+            script.onerror = (error) => {
+                console.error('Script execution error:', error);
+            };
+
+            script.onload = () => {
+                console.log('Script loaded successfully');
+            };
+
             document.head.appendChild(script);
+            console.log('Script added to DOM');
 
             // Wait a moment for the script to execute
             setTimeout(() => {
+                console.log('Checking for widget registration...');
+                console.log('window.NextJSWidgets:', window.NextJSWidgets);
+
                 if (window.NextJSWidgets && window.NextJSWidgets.hero) {
+                    console.log('Widget found! Mounting...');
                     // Mount the widget with test props
                     const testProps = {
                         title: 'API Test - <span class="highlight">Hero</span> Widget',
@@ -76,6 +96,7 @@ export default function WidgetTestPage() {
 
                     window.NextJSWidgets.hero.mount(element, testProps);
                 } else {
+                    console.error('Widget registration failed. Available:', window.NextJSWidgets);
                     throw new Error('Widget not found in global scope after loading');
                 }
             }, 100);

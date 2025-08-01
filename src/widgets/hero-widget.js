@@ -57,12 +57,27 @@ const metadata = {
   }
 };
 
-// Export for WordPress consumption
+// Initialize widget when loaded
+if (typeof window !== 'undefined') {
+  // Register widget globally for WordPress consumption
+  window.NextJSWidgets = window.NextJSWidgets || {};
+  window.NextJSWidgets.hero = {
+    HeroSection,
+    mount,
+    metadata
+  };
+  
+  console.log('Hero widget registered globally');
+}
+
+// Export for ES module consumption
 export { HeroSection, mount, metadata };
 
 // Default export for UMD bundle
-export default {
+const HeroWidget = {
   HeroSection,
   mount,
   metadata
 };
+
+export default HeroWidget;
