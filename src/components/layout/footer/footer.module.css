@@ -1,0 +1,558 @@
+.footer {
+    background-color: var(--color-primary);
+    color: #d1d5dc;
+    padding: 3.65vw 1.46vw; /* 70px 28px */
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+    max-width: 78.96vw; /* 1516px */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3.65vw; /* 70px - matches the gap in design */
+}
+
+/* Main Content */
+.mainContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2.19vw; /* 42px */
+    align-items: start;
+}
+
+/* Company Section */
+.companySection {
+    display: flex;
+    flex-direction: column;
+    gap: 1.05vw; /* 20.1px */
+    max-width: 17.5vw; /* 336px */
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.52vw;
+    margin-bottom: 0.52vw;
+}
+
+.logoIcon {
+    width: 2.19vw; /* 42px */
+    height: 2.19vw;
+    flex-shrink: 0;
+}
+
+.logoText {
+    width: 4.64vw; /* Keep proportional to logo icon */
+    height: auto;
+    flex-shrink: 0;
+}
+
+.description {
+    font-size: 0.73vw; /* 14px */
+    line-height: 1.19vw; /* 22.75px */
+    color: #d1d5dc;
+    margin: 0;
+    padding-bottom: 0.05vw; /* 0.875px */
+}
+
+/* Newsletter */
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    gap: 0.73vw; /* 14px */
+    padding-top: 0.41vw; /* 7.9px */
+}
+
+.sectionTitle {
+    font-size: 0.73vw; /* 14px */
+    line-height: 1.09vw; /* 21px */
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+}
+
+.newsletterForm {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.emailInput {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 0.73vw; /* 14px */
+    padding: 0.40vw 0.60vw; /* 7.75px 11.5px */
+    height: 1.64vw; /* 31.5px */
+    font-size: 0.64vw; /* 12.3px */
+    color: #d1d5dc;
+    font-family: 'Segoe UI', sans-serif;
+    margin-right: 0.36vw; /* 7px gap */
+}
+
+.emailInput::placeholder {
+    color: #6b7280;
+}
+
+.emailInput:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.submitButton {
+    background: var(--color-ac);
+    border: none;
+    border-radius: 0.73vw; /* 14px */
+    width: 1.64vw; /* 31.5px */
+    height: 1.64vw; /* 31.5px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.submitButton:hover {
+    background: #e6890a;
+}
+
+.sendIcon {
+    width: 0.73vw; /* 14px */
+    height: 0.73vw; /* 14px */
+}
+
+/* Links Sections */
+.linksSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1.09vw; /* 21px */
+}
+
+.linksList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55vw; /* 10.5px */
+}
+
+.link {
+    font-size: 0.73vw; /* 14px */
+    line-height: 1.09vw; /* 21px */
+    color: #d1d5dc;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: all 0.2s ease;
+}
+
+.link:hover {
+    color: #ffffff;
+    text-decoration-color: #ffffff;
+}
+
+/* Contact Section */
+.contactSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1.09vw; /* 21px */
+}
+
+.contactList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.73vw; /* 14px */
+}
+
+.contactItem {
+    display: flex;
+    align-items: center;
+    gap: 0.55vw; /* 10.5px */
+}
+
+.contactIcon {
+    width: 1.46vw; /* 28px */
+    height: 1.46vw; /* 28px */
+    border-radius: 0.66vw; /* 12.75px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.phoneIcon {
+    background: rgba(245, 158, 11, 0.2);
+}
+
+.emailIconBg {
+    background: rgba(30, 58, 138, 0.2);
+}
+
+.locationIcon {
+    background: rgba(107, 114, 128, 0.2);
+}
+
+.contactText {
+    font-size: 0.73vw; /* 14px */
+    line-height: 1.09vw; /* 21px */
+    color: #d1d5dc;
+}
+
+/* Social Section */
+.socialSection {
+    display: flex;
+    flex-direction: column;
+    gap: 0.73vw; /* 14px */
+    padding-top: 0.36vw; /* 7px */
+}
+
+.socialLinks {
+    display: flex;
+    gap: 0.55vw; /* 10.5px */
+}
+
+.socialLink {
+    width: 1.82vw; /* 35px */
+    height: 1.82vw; /* 35px */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0.66vw; /* 12.75px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.64vw; /* 12.3px */
+    line-height: 0.91vw; /* 17.5px */
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.socialLink:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Footer Bottom */
+.footerBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.46vw; /* 28px */
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.copyright {
+    font-size: 0.64vw; /* 12.3px */
+    line-height: 0.91vw; /* 17.5px */
+    color: #d1d5dc;
+}
+
+.bottomLinks {
+    display: flex;
+    gap: 0; /* Links are touching in design */
+}
+
+.bottomLink {
+    font-size: 0.64vw; /* 12.3px */
+    line-height: 0.91vw; /* 17.5px */
+    color: #d1d5dc;
+    text-decoration: none;
+    padding: 0 0.52vw; /* Add some padding for spacing */
+    transition: color 0.2s ease;
+}
+
+.bottomLink:hover {
+    color: #ffffff;
+}
+
+.bottomLink:not(:last-child) {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .footer {
+        padding: 6.84vw 2.73vw;
+    }
+
+    .container {
+        gap: 6.84vw;
+    }
+
+    .mainContent {
+        grid-template-columns: 1fr 1fr;
+        gap: 4.10vw;
+    }
+
+    .companySection {
+        max-width: none;
+        gap: 1.95vw;
+    }
+
+    .logoIcon {
+        width: 4.10vw;
+        height: 4.10vw;
+    }
+
+    .logoText {
+        width: 8.68vw;
+    }
+
+    .description {
+        font-size: 1.37vw;
+        line-height: 2.23vw;
+    }
+
+    .newsletter {
+        gap: 1.37vw;
+    }
+
+    .sectionTitle {
+        font-size: 1.37vw;
+        line-height: 2.05vw;
+    }
+
+    .emailInput {
+        height: 3.07vw;
+        font-size: 1.20vw;
+        padding: 0.75vw 1.12vw;
+        border-radius: 1.37vw;
+        margin-right: 0.68vw;
+    }
+
+    .submitButton {
+        width: 3.07vw;
+        height: 3.07vw;
+        border-radius: 1.37vw;
+    }
+
+    .sendIcon {
+        width: 1.37vw;
+        height: 1.37vw;
+    }
+
+    .linksSection {
+        gap: 2.05vw;
+    }
+
+    .linksList {
+        gap: 1.02vw;
+    }
+
+    .link {
+        font-size: 1.37vw;
+        line-height: 2.05vw;
+    }
+
+    .contactSection {
+        gap: 2.05vw;
+    }
+
+    .contactList {
+        gap: 1.37vw;
+    }
+
+    .contactIcon {
+        width: 2.73vw;
+        height: 2.73vw;
+        border-radius: 1.24vw;
+    }
+
+    .contactText {
+        font-size: 1.37vw;
+        line-height: 2.05vw;
+    }
+
+    .socialSection {
+        gap: 1.37vw;
+    }
+
+    .socialLinks {
+        gap: 1.02vw;
+    }
+
+    .socialLink {
+        width: 3.42vw;
+        height: 3.42vw;
+        border-radius: 1.24vw;
+        font-size: 1.20vw;
+        line-height: 1.71vw;
+    }
+
+    .footerBottom {
+        padding-top: 2.73vw;
+        flex-direction: column;
+        gap: 1.37vw;
+        text-align: center;
+    }
+
+    .copyright {
+        font-size: 1.20vw;
+        line-height: 1.71vw;
+    }
+
+    .bottomLink {
+        font-size: 1.20vw;
+        line-height: 1.71vw;
+        padding: 0 0.98vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .mainContent {
+        grid-template-columns: 1fr;
+        gap: 6.25vw;
+    }
+
+    .companySection {
+        order: 1;
+    }
+
+    .contactSection {
+        order: 2;
+    }
+
+    .linksSection:nth-child(2) {
+        order: 3;
+    }
+
+    .linksSection:nth-child(3) {
+        order: 4;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .footer {
+        padding: 17.86vw 7.14vw;
+    }
+
+    .container {
+        gap: 17.86vw;
+    }
+
+    .mainContent {
+        gap: 16.33vw;
+    }
+
+    .companySection {
+        gap: 5.10vw;
+    }
+
+    .logoIcon {
+        width: 10.71vw;
+        height: 10.71vw;
+    }
+
+    .logoText {
+        width: 22.65vw;
+    }
+
+    .description {
+        font-size: 3.57vw;
+        line-height: 5.82vw;
+    }
+
+    .newsletter {
+        gap: 3.57vw;
+    }
+
+    .sectionTitle {
+        font-size: 3.57vw;
+        line-height: 5.36vw;
+    }
+
+    .emailInput {
+        height: 8.01vw;
+        font-size: 3.13vw;
+        padding: 1.96vw 2.93vw;
+        border-radius: 3.57vw;
+        margin-right: 1.79vw;
+    }
+
+    .submitButton {
+        width: 8.01vw;
+        height: 8.01vw;
+        border-radius: 3.57vw;
+    }
+
+    .sendIcon {
+        width: 3.57vw;
+        height: 3.57vw;
+    }
+
+    .linksSection {
+        gap: 5.36vw;
+    }
+
+    .linksList {
+        gap: 2.68vw;
+    }
+
+    .link {
+        font-size: 3.57vw;
+        line-height: 5.36vw;
+    }
+
+    .contactSection {
+        gap: 5.36vw;
+    }
+
+    .contactList {
+        gap: 3.57vw;
+    }
+
+    .contactIcon {
+        width: 7.14vw;
+        height: 7.14vw;
+        border-radius: 3.24vw;
+    }
+
+    .contactText {
+        font-size: 3.57vw;
+        line-height: 5.36vw;
+    }
+
+    .socialSection {
+        gap: 3.57vw;
+    }
+
+    .socialLinks {
+        gap: 2.68vw;
+    }
+
+    .socialLink {
+        width: 8.93vw;
+        height: 8.93vw;
+        border-radius: 3.24vw;
+        font-size: 3.13vw;
+        line-height: 4.46vw;
+    }
+
+    .footerBottom {
+        padding-top: 7.14vw;
+        gap: 3.57vw;
+    }
+
+    .copyright {
+        font-size: 3.13vw;
+        line-height: 4.46vw;
+    }
+
+    .bottomLinks {
+        flex-direction: column;
+        gap: 1.79vw;
+    }
+
+    .bottomLink {
+        font-size: 3.13vw;
+        line-height: 4.46vw;
+        padding: 0;
+        border-right: none;
+    }
+
+    .bottomLink:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 1.79vw;
+    }
+}

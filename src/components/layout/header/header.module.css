@@ -1,0 +1,275 @@
+.header {
+    background: var(--bg);
+    border-radius: 2.71vw;
+    /* 52px */
+    box-shadow: 0px 0.21vw 0.21vw 0px rgba(0, 0, 0, 0.11);
+    /* 0px 4px 4px 0px */
+    padding: 0.63vw 1.25vw;
+    /* 12px 24px */
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    margin: 1.30vw 1.30vw 0 1.30vw;
+    /* 25px 25px 0 25px */
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Logo Section */
+.logoContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.52vw;
+    /* 10px gap between logo icon and text */
+    flex-shrink: 0;
+}
+
+.logoIcon {
+    width: 3.38vw;
+    /* ~64px */
+    height: 3.28vw;
+    /* ~63px */
+    flex-shrink: 0;
+}
+
+.logoText {
+    width: 4.64vw;
+    /* ~89px */
+    height: 1.61vw;
+    /* ~31px */
+    flex-shrink: 0;
+}
+
+/* Navigation Menu */
+.navMenu {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: space-evenly;
+    margin: 0 2vw;
+    max-width: 50vw;
+    /* Limit the navigation width to prevent stretching */
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+}
+
+.navMenu::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
+}
+
+.navLink {
+    font-weight: 500;
+    font-size: 0.83vw;
+    /* 16px */
+    line-height: 1.45;
+    color: var(--text-primary);
+    text-decoration: none;
+    white-space: nowrap;
+    letter-spacing: -0.02vw;
+    /* -0.08px converted to vw */
+    transition: color 0.2s ease;
+    text-align: center;
+    flex-shrink: 0;
+    min-width: fit-content;
+}
+
+.navLink:hover {
+    color: var(--color-ac);
+}
+
+.navLinkDisabled {
+    color: #dadada;
+    cursor: default;
+    pointer-events: none;
+}
+
+/* Contact Button */
+.contactButton {
+    background: var(--color-primary);
+    border-radius: 1584px;
+    /* Very large border radius for pill shape */
+    padding: 0.47vw 0.94vw;
+    /* 9px 18px */
+    height: 2.71vw;
+    /* 52px */
+    min-width: 11.61vw;
+    /* 223px */
+    backdrop-filter: blur(2.5px);
+    border: 1px solid var(--bg);
+    flex-shrink: 0;
+}
+
+.contactButtonText {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.83vw;
+    /* 15.875px ≈ 16px */
+    line-height: 0.94vw;
+    /* 18px */
+    color: var(--text-contrast) !important;
+    font-weight: 400;
+}
+
+.contactButtonLeftIcon {
+    width: 0.89vw;
+    /* 17px for the green dot */
+    height: 0.89vw;
+    /* 17px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactButtonIcon {
+    /* This will style the RightIcon container */
+    margin-left: 0.26vw;
+    /* 5px */
+}
+
+.rightIconContainer {
+    background: var(--color-ac);
+    border-radius: 50%;
+    width: 1.67vw;
+    /* 32px */
+    height: 1.67vw;
+    /* 32px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .header {
+        padding: 2.34vw 6.25vw 2.34vw 2.83vw;
+        border-radius: 2.08vw;
+        /* 40px converted to vw */
+    }
+
+    .logoContainer {
+        gap: 0.98vw;
+    }
+
+    .logoIcon {
+        width: 6.35vw;
+        height: 6.15vw;
+    }
+
+    .logoText {
+        width: 8.71vw;
+        height: 3.02vw;
+    }
+
+    .navMenu {
+        margin: 0 1.5vw;
+        max-width: 60vw;
+        /* Slightly larger on tablet */
+    }
+
+    .navLink {
+        font-size: 1.56vw;
+    }
+
+    .contactButton {
+        padding: 0.88vw 1.76vw;
+        height: 5.08vw;
+        min-width: 21.78vw;
+    }
+
+    .contactButtonText {
+        font-size: 1.56vw !important;
+        line-height: 1.76vw !important;
+    }
+
+    .contactButtonLeftIcon {
+        width: 1.66vw;
+        /* Responsive size for green dot */
+        height: 1.66vw;
+    }
+
+    .contactButtonIcon {
+        margin-left: 0.49vw;
+    }
+
+    .rightIconContainer {
+        width: 3.13vw;
+        height: 3.13vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navMenu {
+        display: none;
+        /* Hide navigation on mobile - could be replaced with hamburger menu */
+    }
+
+    .header {
+        padding: 3.13vw 6.25vw;
+        border-radius: 2.60vw;
+        /* 20px converted to vw for mobile */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header {
+        padding: 8.15vw 16.31vw 8.15vw 7.37vw;
+        border-radius: 7.83vw;
+        /* 30px converted to vw */
+    }
+
+    .logoContainer {
+        gap: 2.56vw;
+    }
+
+    .logoIcon {
+        width: 16.59vw;
+        height: 16.07vw;
+    }
+
+    .logoText {
+        width: 22.76vw;
+        height: 7.89vw;
+    }
+
+    .navLink {
+        font-size: 4.07vw;
+    }
+
+    .contactButton {
+        padding: 2.30vw 4.59vw;
+        height: 13.26vw;
+        min-width: 56.85vw;
+    }
+
+    .contactButtonText {
+        font-size: 4.07vw !important;
+        line-height: 4.59vw !important;
+    }
+
+    .contactButtonLeftIcon {
+        width: 4.33vw;
+        /* Mobile responsive size for green dot */
+        height: 4.33vw;
+    }
+
+    .contactButtonIcon {
+        margin-left: 1.28vw;
+    }
+
+    .rightIconContainer {
+        width: 8.15vw;
+        height: 8.15vw;
+    }
+}

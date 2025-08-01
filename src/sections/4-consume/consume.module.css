@@ -1,0 +1,256 @@
+/* Main Section */
+.consume {
+    padding: 0 7.71vw;
+    background: var(--bg);
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 86.25vw;
+    margin: 0 auto;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 9.06vw;
+    position: relative;
+}
+
+/* Dashboard Image */
+.dashboardImage {
+    width: 46vw;
+    height: 40vw;
+    object-fit: contain;
+}
+
+/* Right Content */
+.rightContent {
+    flex: 1;
+    max-width: 26.67vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 32.81vw;
+}
+
+.textContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25vw;
+}
+
+/* Typography */
+.mainHeading {
+    font-weight: 400;
+    font-size: 2.71vw;
+    line-height: 1.05;
+    color: var(--color-primary);
+    margin: 0;
+    letter-spacing: -0.19vw;
+    margin-bottom: 1.25vw;
+}
+
+.subHeading {
+    font-weight: 500;
+    font-size: 1.72vw;
+    line-height: 1.1;
+    color: var(--color-primary);
+    margin: 0;
+    letter-spacing: -0.077vw;
+    margin-bottom: 1.25vw;
+}
+
+.description {
+    font-weight: 400;
+    font-size: 1.04vw;
+    line-height: 1.1;
+    color: var(--color-primary);
+    margin: 0;
+    letter-spacing: -0.047vw;
+    width: 21.56vw;
+    margin-bottom: 1.25vw;
+}
+
+/* Buttons */
+.buttonGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.57vw;
+    align-items: flex-start;
+}
+
+.infoButton {
+    border: 1px solid var(--color-ac);
+    border-radius: 2.68vw;
+    height: 2.71vw;
+    width: 22.71vw;
+    padding: 0.625vw 0.625vw 0.625vw 1.15vw;
+    background: transparent !important;
+    color: var(--color-ac) !important;
+    margin-bottom: 0.57vw;
+}
+
+.infoButton .icon {
+    color: var(--color-ac) !important;
+}
+
+.infoButton .text {
+    color: var(--color-ac) !important;
+}
+
+.actionButtons {
+    display: flex;
+    gap: 0.57vw;
+    align-items: center;
+}
+
+.auditButton {
+    background: var(--color-ac) !important;
+    border-radius: 2.68vw;
+    height: 2.71vw;
+    width: 10.99vw;
+    padding: 0.94vw 1.15vw;
+    gap: 0.21vw;
+}
+
+
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .consume {
+        padding: 9.77vw 2.73vw;
+    }
+
+    .content {
+        flex-direction: column;
+        gap: 7.81vw;
+        text-align: center;
+    }
+
+    .dashboardImage {
+        width: 60vw;
+        height: 50vw;
+    }
+
+    .rightContent {
+        max-width: none;
+        align-items: center;
+        height: auto;
+    }
+
+    .mainHeading {
+        font-size: 5.08vw;
+        letter-spacing: -0.36vw;
+    }
+
+    .subHeading {
+        font-size: 3.22vw;
+        letter-spacing: -0.14vw;
+    }
+
+    .description {
+        font-size: 1.95vw;
+        max-width: 80vw;
+        width: auto;
+        letter-spacing: -0.088vw;
+    }
+
+    .buttonGroup {
+        align-items: center;
+        gap: 1.17vw;
+    }
+
+    .infoButton {
+        margin-bottom: 1.17vw;
+    }
+
+    .actionButtons {
+        gap: 1.17vw;
+    }
+
+    .auditButton {
+        height: 5.08vw;
+        width: 29vw;
+        padding: 1.76vw 2.15vw;
+        border-radius: 5.02vw;
+    }
+
+    .contactButton {
+        height: 5.08vw;
+        width: 29vw;
+        padding: 1.17vw 1.95vw 1.17vw 1.56vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .consume {
+        padding: 25.53vw 6.81vw;
+    }
+
+    .content {
+        gap: 20.41vw;
+    }
+
+    .dashboardImage {
+        width: 85vw;
+        height: 70vw;
+    }
+
+    .textContent {
+        gap: 3.27vw;
+    }
+
+    .mainHeading {
+        font-size: 13.27vw;
+        letter-spacing: -0.94vw;
+        margin-bottom: 3.27vw;
+    }
+
+    .subHeading {
+        font-size: 8.41vw;
+        letter-spacing: -0.37vw;
+        margin-bottom: 3.27vw;
+    }
+
+    .description {
+        font-size: 5.10vw;
+        letter-spacing: -0.23vw;
+        width: auto;
+        margin-bottom: 3.27vw;
+    }
+
+    .buttonGroup {
+        gap: 3.06vw;
+        width: 100%;
+    }
+
+    .infoButton {
+        height: 13.27vw;
+        width: 100%;
+        padding: 3.06vw 3.06vw 3.06vw 5.61vw;
+        border-radius: 13.11vw;
+        margin-bottom: 3.06vw;
+    }
+
+    .actionButtons {
+        flex-direction: column;
+        gap: 3.06vw;
+        width: 100%;
+    }
+
+    .auditButton {
+        height: 13.27vw;
+        width: 100%;
+        padding: 4.58vw 5.61vw;
+        border-radius: 13.11vw;
+    }
+
+    .contactButton {
+        height: 13.27vw;
+        width: 100%;
+        padding: 3.06vw 5.10vw 3.06vw 4.08vw;
+    }
+}

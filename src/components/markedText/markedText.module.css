@@ -1,0 +1,96 @@
+/* Base highlight styles */
+.highlight {
+  position: relative;
+  display: inline-block;
+  /* Inherit font properties from parent */
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  color: inherit;
+  z-index: 1;
+  /* Add some padding to ensure the background doesn't touch the text */
+  padding: 0 12px;
+}
+
+.highlight::before {
+  content: '';
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+  right: 0;
+  transform: translateY(0%);
+  background-color: var(--color-ac, #fc9900); /* Orange color from Figma with fallback */
+  border-radius: 360px;
+  z-index: -1;
+  /* Make it 50% of the text height */
+  height: 45.6%;
+  width: 100%;
+}
+
+/* Variant: Default - use the base styles */
+.highlight--default::before {
+  height: 45.6%;
+  border-radius: 360px;
+}
+
+/* Variant: Large - use the base styles */
+.highlight--large::before {
+  height: 45.6%;
+  border-radius: 360px;
+}
+
+.highlight--large {
+  padding: 0 16px;
+}
+
+/* Variant: Small - use the base styles */
+.highlight--small::before {
+  height: 45.6%;
+  border-radius: 360px;
+}
+
+.highlight--small {
+  padding: 0 8px;
+}
+
+/* Ensure text is readable and properly positioned */
+.highlight {
+  color: inherit;
+  vertical-align: baseline;
+}
+
+/* Optional: Add a subtle transition for interactive states */
+.highlight::before {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Responsive adjustments - maintain 50% height but adjust padding */
+@media (max-width: 768px) {
+  .highlight--default::before {
+    height: 45.6%;
+    border-radius: 360px;
+  }
+  
+  .highlight--large::before {
+    height: 45.6%;
+    border-radius: 360px;
+  }
+  
+  .highlight--small::before {
+    height: 45.6%;
+    border-radius: 360px;
+  }
+  
+  .highlight {
+    padding: 0 8px;
+  }
+  
+  .highlight--large {
+    padding: 0 12px;
+  }
+  
+  .highlight--small {
+    padding: 0 6px;
+  }
+} 

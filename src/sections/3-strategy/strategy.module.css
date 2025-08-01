@@ -1,0 +1,234 @@
+/* Main Section */
+.strategy {
+    padding: 0 9.2vw;
+    background: var(--bg);
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 86.25vw;
+    margin: 0 auto;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.93vw;
+    position: relative;
+}
+
+/* Left Content */
+.leftContent {
+    flex: 1;
+    max-width: 26.67vw;
+    display: flex;
+    flex-direction: column;
+    gap: 3.13vw;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25vw;
+}
+
+.mainHeading {
+    font-weight: 400;
+    font-size: 2.71vw;
+    line-height: 1.05;
+    color: var(--color-primary);
+    margin: 0;
+    letter-spacing: -0.19vw;
+}
+
+.description {
+    font-weight: 400;
+    font-size: 1.04vw;
+    line-height: 1.24;
+    color: var(--color-primary);
+    margin: 0;
+    letter-spacing: -0.047vw;
+}
+
+/* Buttons */
+.ctaButton {
+    background: var(--color-ac) !important;
+    border-radius: 2.68vw;
+    height: 2.71vw;
+    width: fit-content;
+    padding: 0.625vw;
+    gap: 0.21vw;
+    align-self: flex-start;
+}
+
+.buttonGroup {
+    display: flex;
+    align-items: center;
+    gap: 1.72vw;
+    flex-wrap: wrap;
+}
+
+.infoButton {
+    border: 1px solid var(--color-ac);
+    border-radius: 2.68vw;
+    height: 2.71vw;
+    padding: 0.625vw 1.15vw;
+    background: transparent !important;
+    width: fit-content;
+    color: var(--color-ac) !important;
+}
+
+.infoButton .icon {
+    color: var(--color-ac) !important;
+}
+
+.infoButton .text {
+    color: var(--color-ac) !important;
+}
+
+.contactButton {
+    background: var(--color-primary) !important;
+    border-radius: 18.75vw;
+    height: 2.71vw;
+    padding: 0.625vw 1.04vw 0.625vw 0.83vw;
+    gap: 0.42vw;
+    width: fit-content;
+}
+
+/* Right Content */
+.rightContent {
+    flex-shrink: 0;
+    width: 35vw;
+    height: 45vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.strategyImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Arrow Icon */
+.arrowIcon {
+    color: var(--color-ac);
+    width: 253.198px;
+    height: 253.198px;
+    transform: translateX(5vw);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .strategy {
+        padding: 9.77vw 2.73vw;
+    }
+
+    .content {
+        flex-direction: column;
+        gap: 7.81vw;
+        text-align: center;
+    }
+
+    .leftContent {
+        max-width: none;
+        align-items: center;
+        gap: 5.86vw;
+    }
+
+    .mainHeading {
+        font-size: 5.08vw;
+        letter-spacing: -0.36vw;
+    }
+
+    .description {
+        font-size: 1.95vw;
+        max-width: 80vw;
+        letter-spacing: -0.088vw;
+    }
+
+    .ctaButton {
+        height: 5.08vw;
+        padding: 1.17vw;
+        border-radius: 5.02vw;
+    }
+
+    .buttonGroup {
+        gap: 3.22vw;
+        justify-content: center;
+    }
+
+
+    .rightContent {
+        width: 60vw;
+        height: 45vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .strategy {
+        padding: 25.53vw 6.81vw;
+    }
+
+    .content {
+        gap: 20.41vw;
+    }
+
+    .leftContent {
+        gap: 15.31vw;
+    }
+
+    .section {
+        gap: 3.27vw;
+    }
+
+    .mainHeading {
+        font-size: 13.27vw;
+        letter-spacing: -0.94vw;
+    }
+
+    .description {
+        font-size: 5.10vw;
+        letter-spacing: -0.23vw;
+    }
+
+    .ctaButton {
+        height: 13.27vw;
+        padding: 3.06vw;
+        border-radius: 13.11vw;
+    }
+
+    .buttonGroup {
+        flex-direction: column;
+        gap: 8.16vw;
+        width: 100%;
+    }
+
+    .infoButton {
+        height: 13.27vw;
+        padding: 3.06vw 5.61vw;
+        border-radius: 13.11vw;
+    }
+
+    .infoButton .icon {
+        color: var(--color-ac) !important;
+    }
+
+    .infoButton .text {
+        color: var(--color-ac) !important;
+    }
+
+    .contactButton {
+        height: 13.27vw;
+        padding: 3.06vw 5.10vw 3.06vw 4.08vw;
+        gap: 2.04vw;
+    }
+
+    .rightContent {
+        width: 85vw;
+        height: 63.78vw;
+    }
+}

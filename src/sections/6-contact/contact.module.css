@@ -1,0 +1,572 @@
+/* Main Section */
+.contact {
+    padding: 0 23vw;
+    background: var(--bg);
+    position: relative;
+}
+
+.container {
+    max-width: 86.25vw;
+    margin: 0 auto;
+}
+
+/* Heading Section */
+.headingSection {
+    text-align: center;
+    margin-bottom: 5.21vw;
+}
+
+.mainHeading {
+    font-weight: 400;
+    font-size: 2.71vw;
+    line-height: 1.05;
+    color: var(--color-primary);
+    margin: 0 0 1.25vw 0;
+    letter-spacing: -0.19vw;
+}
+
+.description {
+    font-weight: 400;
+    font-size: 1.04vw;
+    line-height: 1.24;
+    color: var(--color-primary);
+    margin: 0;
+    letter-spacing: -0.047vw;
+    max-width: 50vw;
+    margin: 0 auto;
+}
+
+/* Content Grid */
+.contentGrid {
+    display: flex;
+    gap: 5.26vw;
+    align-items: flex-start;
+}
+
+.leftColumn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.46vw;
+}
+
+.rightColumn {
+    flex: 1;
+}
+
+/* Cards */
+.contactCard,
+.guaranteesCard,
+.formCard {
+    background: white;
+    border-radius: 0.66vw;
+    padding: 1.09vw;
+    box-shadow: 0px 1.04vw 1.30vw -0.26vw rgba(0, 0, 0, 0.1), 0px 0.42vw 0.52vw -0.31vw rgba(0, 0, 0, 0.1);
+}
+
+.cardTitle {
+    font-weight: 500;
+    font-size: 1.09vw;
+    line-height: 1.33;
+    color: var(--color-primary);
+    margin: 0 0 1.09vw 0;
+}
+
+/* Contact Info Grid */
+.contactGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.73vw;
+}
+
+.contactItem {
+    background: #F9FAFB;
+    border-radius: 0.73vw;
+    padding: 0.73vw;
+    display: flex;
+    gap: 0.73vw;
+    align-items: flex-start;
+}
+
+.contactIconWrapper {
+    background: white;
+    border-radius: 0.73vw;
+    width: 2.19vw;
+    height: 2.19vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0.05vw 0.16vw 0px rgba(0, 0, 0, 0.1), 0px 0.05vw 0.10vw -0.05vw rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.contactIconWrapper svg {
+    width: 1.09vw;
+    height: 1.09vw;
+}
+
+.contactDetails {
+    flex: 1;
+    min-width: 0;
+}
+
+.contactLabel {
+    font-weight: 600;
+    font-size: 0.73vw;
+    line-height: 1.5;
+    color: var(--color-primary);
+    margin: 0 0 0.26vw 0;
+}
+
+.contactValue {
+    font-weight: 500;
+    font-size: 0.73vw;
+    line-height: 1.5;
+    color: var(--color-primary);
+    margin: 0 0 0.26vw 0;
+}
+
+.contactSubtext {
+    font-weight: 400;
+    font-size: 0.64vw;
+    line-height: 1.42;
+    color: #4A5565;
+    margin: 0;
+}
+
+/* Guarantees */
+.guaranteesList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.73vw;
+}
+
+.guaranteeItem {
+    display: flex;
+    align-items: center;
+    gap: 0.55vw;
+    font-weight: 400;
+    font-size: 0.73vw;
+    line-height: 1.5;
+    color: var(--color-primary);
+}
+
+.checkIcon {
+    flex-shrink: 0;
+    width: 0.91vw;
+    height: 0.91vw;
+    color: #00A63E;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    padding: 0.18vw;
+}
+
+/* Statistics */
+.statsSection {
+    display: flex;
+    gap: 0.73vw;
+}
+
+.statItem {
+    flex: 1;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 0.66vw;
+    padding: 1.09vw;
+    text-align: center;
+    box-shadow: 0px 1.04vw 1.30vw -0.26vw rgba(0, 0, 0, 0.1), 0px 0.42vw 0.52vw -0.31vw rgba(0, 0, 0, 0.1);
+}
+
+.statNumber {
+    font-weight: 700;
+    font-size: 1.64vw;
+    line-height: 1.11;
+    color: var(--color-primary);
+    margin-bottom: 0.08vw;
+}
+
+.statLabel {
+    font-weight: 400;
+    font-size: 0.64vw;
+    line-height: 1.42;
+    color: var(--color-primary);
+    opacity: 0.9;
+}
+
+/* Form */
+.formCard {
+    height: fit-content;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.04vw;
+}
+
+.formRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.09vw;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55vw;
+}
+
+.formLabel {
+    font-weight: 600;
+    font-size: 0.64vw;
+    line-height: 1.42;
+    color: var(--color-primary);
+}
+
+.required {
+    color: #EF4444;
+}
+
+.formInput,
+.formTextarea {
+    background: #F9FAFB;
+    border: 1px solid #E5E7EB;
+    border-radius: 0.73vw;
+    padding: 0.40vw 0.60vw;
+    font-size: 0.64vw;
+    line-height: normal;
+    color: var(--color-primary);
+    transition: border-color 0.2s ease;
+}
+
+.formInput {
+    height: 1.64vw;
+}
+
+.formTextarea {
+    min-height: 5.83vw;
+    resize: vertical;
+}
+
+.formInput:focus,
+.formTextarea:focus {
+    outline: none;
+    border-color: var(--color-ac);
+}
+
+.formInput::placeholder,
+.formTextarea::placeholder {
+    color: #6B7280;
+}
+
+.submitButton {
+    background: var(--color-ac) !important;
+    border-radius: 0.73vw !important;
+    height: 2.71vw !important;
+    width: 100% !important;
+    padding: 0.83vw 1.56vw !important;
+    margin-top: 0.52vw;
+}
+
+.formDisclaimer {
+    font-size: 0.64vw;
+    line-height: 1.62;
+    color: #6B7280;
+    text-align: center;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .contact {
+        padding: 9.77vw 2.73vw;
+    }
+
+    .headingSection {
+        margin-bottom: 7.81vw;
+    }
+
+    .mainHeading {
+        font-size: 5.08vw;
+        letter-spacing: -0.36vw;
+    }
+
+    .description {
+        font-size: 1.95vw;
+        max-width: 80vw;
+        letter-spacing: -0.088vw;
+    }
+
+    .contentGrid {
+        flex-direction: column;
+        gap: 5.86vw;
+    }
+
+    .leftColumn {
+        gap: 2.73vw;
+    }
+
+    .contactCard,
+    .guaranteesCard,
+    .formCard {
+        padding: 2.05vw;
+        border-radius: 1.24vw;
+    }
+
+    .cardTitle {
+        font-size: 2.05vw;
+        margin-bottom: 2.05vw;
+    }
+
+    .contactGrid {
+        gap: 1.37vw;
+    }
+
+    .contactItem {
+        padding: 1.37vw;
+        border-radius: 1.37vw;
+        gap: 1.37vw;
+    }
+
+    .contactIconWrapper {
+        width: 4.10vw;
+        height: 4.10vw;
+        border-radius: 1.37vw;
+    }
+
+    .contactIconWrapper svg {
+        width: 2.05vw;
+        height: 2.05vw;
+    }
+
+    .contactLabel,
+    .contactValue {
+        font-size: 1.37vw;
+    }
+
+    .contactSubtext {
+        font-size: 1.20vw;
+    }
+
+    .guaranteesList {
+        gap: 1.37vw;
+    }
+
+    .guaranteeItem {
+        font-size: 1.37vw;
+        gap: 1.03vw;
+    }
+
+    .checkIcon {
+        width: 1.71vw;
+        height: 1.71vw;
+        padding: 0.34vw;
+    }
+
+    .statsSection {
+        gap: 1.37vw;
+    }
+
+    .statItem {
+        padding: 2.05vw;
+        border-radius: 1.24vw;
+    }
+
+    .statNumber {
+        font-size: 3.08vw;
+    }
+
+    .statLabel {
+        font-size: 1.20vw;
+    }
+
+    .contactForm {
+        gap: 1.95vw;
+    }
+
+    .formRow {
+        gap: 2.05vw;
+    }
+
+    .formGroup {
+        gap: 1.03vw;
+    }
+
+    .formLabel {
+        font-size: 1.20vw;
+    }
+
+    .formInput,
+    .formTextarea {
+        padding: 0.75vw 1.13vw;
+        font-size: 1.20vw;
+        border-radius: 1.37vw;
+    }
+
+    .formInput {
+        height: 3.08vw;
+    }
+
+    .formTextarea {
+        min-height: 10.94vw;
+    }
+
+    .submitButton {
+        height: 5.08vw !important;
+        padding: 1.56vw 2.93vw !important;
+        border-radius: 1.37vw !important;
+    }
+
+    .formDisclaimer {
+        font-size: 1.20vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contact {
+        padding: 25.53vw 6.81vw;
+    }
+
+    .headingSection {
+        margin-bottom: 20.41vw;
+    }
+
+    .mainHeading {
+        font-size: 13.27vw;
+        letter-spacing: -0.94vw;
+        margin-bottom: 3.27vw;
+    }
+
+    .description {
+        font-size: 5.10vw;
+        max-width: none;
+        letter-spacing: -0.23vw;
+    }
+
+    .contentGrid {
+        gap: 15.31vw;
+    }
+
+    .leftColumn {
+        gap: 7.14vw;
+    }
+
+    .contactCard,
+    .guaranteesCard,
+    .formCard {
+        padding: 5.36vw;
+        border-radius: 3.27vw;
+    }
+
+    .cardTitle {
+        font-size: 5.36vw;
+        margin-bottom: 5.36vw;
+    }
+
+    .contactGrid {
+        grid-template-columns: 1fr;
+        gap: 3.57vw;
+    }
+
+    .contactItem {
+        padding: 3.57vw;
+        border-radius: 3.57vw;
+        gap: 3.57vw;
+    }
+
+    .contactIconWrapper {
+        width: 10.71vw;
+        height: 10.71vw;
+        border-radius: 3.57vw;
+    }
+
+    .contactIconWrapper svg {
+        width: 5.36vw;
+        height: 5.36vw;
+    }
+
+    .contactLabel,
+    .contactValue {
+        font-size: 3.57vw;
+    }
+
+    .contactSubtext {
+        font-size: 3.14vw;
+    }
+
+    .guaranteesList {
+        gap: 3.57vw;
+    }
+
+    .guaranteeItem {
+        font-size: 3.57vw;
+        gap: 2.68vw;
+    }
+
+    .checkIcon {
+        width: 4.46vw;
+        height: 4.46vw;
+        padding: 0.89vw;
+    }
+
+    .statsSection {
+        flex-direction: column;
+        gap: 3.57vw;
+    }
+
+    .statItem {
+        padding: 5.36vw;
+        border-radius: 3.27vw;
+    }
+
+    .statNumber {
+        font-size: 8.04vw;
+        margin-bottom: 0.89vw;
+    }
+
+    .statLabel {
+        font-size: 3.14vw;
+    }
+
+    .contactForm {
+        gap: 5.10vw;
+    }
+
+    .formRow {
+        grid-template-columns: 1fr;
+        gap: 5.36vw;
+    }
+
+    .formGroup {
+        gap: 2.68vw;
+    }
+
+    .formLabel {
+        font-size: 3.14vw;
+    }
+
+    .formInput,
+    .formTextarea {
+        padding: 1.96vw 2.95vw;
+        font-size: 3.14vw;
+        border-radius: 3.57vw;
+    }
+
+    .formInput {
+        height: 8.04vw;
+    }
+
+    .formTextarea {
+        min-height: 28.57vw;
+    }
+
+    .submitButton {
+        height: 13.27vw !important;
+        padding: 4.08vw 7.65vw !important;
+        border-radius: 3.57vw !important;
+        margin-top: 1.36vw;
+    }
+
+    .formDisclaimer {
+        font-size: 3.14vw;
+    }
+}

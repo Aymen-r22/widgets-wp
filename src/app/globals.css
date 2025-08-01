@@ -1,0 +1,59 @@
+:root {
+  --bg: #FFF;
+
+  --color-primary: #020F40;
+  --color-ac: #FC9900;
+  --color-success: #4CAF50;
+  --color-success-light: #E8F5E8;
+  --color-danger: #E74C3C;
+  --color-danger-light: #FFE4E1;
+
+  --text-primary: var(--color-primary);
+  --text-ac: var(--color-ac);
+  --text-contrast: var(--bg);
+  --text-success: var(--color-success);
+  --text-danger: var(--color-danger);
+}
+
+
+
+/* ==========================================================================
+   Base Styles
+   ========================================================================== */
+   * {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  body {
+    color: var(--text-primary);
+    background: var(--bg);
+    font-family: var(--font-work-sans), sans-serif;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--text-primary);
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  strong {
+    font-weight: 500;
+    font-size: inherit;
+  }
+  
+  span {
+    font-size: inherit;
+  }
+  
+  button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: var(--text-primary);
+  }

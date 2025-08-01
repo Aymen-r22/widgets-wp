@@ -1,0 +1,189 @@
+.centralize {
+    padding: 0 7.71vw; /* 198px 148px */
+    background: var(--bg);
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 86.25vw; /* 1656px */
+    margin: 0 auto;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.20vw; /* 23px */
+    position: relative;
+}
+
+/* Left Content */
+.leftContent {
+    flex: 1;
+    max-width: 42.08vw; /* 808px */
+    display: flex;
+    flex-direction: column;
+    gap: 2.92vw; /* 56px */
+    position: relative;
+}
+
+/* Heading Section */
+.headingSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25vw; /* 24px */
+}
+
+.mainHeading {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size: 2.71vw; /* 52px */
+    line-height: 1.05;
+    color: var(--color-primary);
+    margin: 0;
+    letter-spacing: -0.19vw; /* -3.64px */
+}
+
+.description {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.04vw; /* 20px */
+    line-height: 1.1;
+    color: var(--color-primary);
+    margin: 0;
+    letter-spacing: -0.047vw; /* -0.9px */
+    width: 33.18vw; /* 637px */
+}
+
+/* Features Section */
+.featuresSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1.98vw; /* 38px */
+}
+
+.firstFeatureRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.featuresRow {
+    display: flex;
+    gap: 0.73vw; /* 14px */
+    align-items: flex-start;
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    gap: 0.36vw; /* 7px */
+    align-items: flex-start;
+}
+
+.featuresRow .feature {
+    flex: 1;
+}
+
+.featureIcon {
+    flex-shrink: 0;
+    width: 1.56vw; /* 30px */
+    height: 1.56vw; /* 30px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-ac);
+}
+
+.featureIcon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.firstFeatureRow .feature {
+    max-width: 20.21vw; /* 388px */
+}
+
+.featuresRow .feature:first-child {
+    max-width: 21.82vw; /* 419px */
+}
+
+.featuresRow .feature:last-child {
+    max-width: 19.27vw; /* 370px */
+}
+
+.featureTitle {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.56vw; /* 30px */
+    line-height: 1.05;
+    color: var(--color-primary);
+    margin: 0;
+    letter-spacing: -0.070vw; /* -1.35px */
+}
+
+.featureSubtitle {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size: 0.83vw; /* 16px */
+    line-height: 1.1;
+    color: #7D8998;
+    margin: 0;
+    letter-spacing: -0.038vw; /* -0.72px */
+}
+
+.featureDescription {
+    font-weight: 400;
+    font-size: 0.83vw; /* 16px */
+    line-height: 1.1;
+    color: var(--color-primary);
+    margin: 0;
+    letter-spacing: -0.038vw; /* -0.72px */
+}
+
+/* Buttons Section */
+.buttonsSection {
+    display: flex;
+    flex-direction: column;
+    gap: 0.57vw; /* 11px */
+    align-items: flex-start;
+    width: fit-content;
+}
+
+.buttonsSection > button {
+    width: 100%;
+}
+.actionButtons {
+    display: flex;
+    gap: 0.57vw; /* 11px */
+    align-items: center;
+}
+
+/* Bent Arrow */
+.bentArrow {
+    flex-shrink: 0;
+    margin-top: 1.56vw; /* 30px */
+}
+
+.bentArrow svg {
+    width: 10.47vw; /* 201px */
+    height: 10.47vw; /* 201px */
+    color: var(--color-ac);
+}
+
+/* Right Content */
+.rightContent {
+    flex-shrink: 0;
+    width: 43vw; /* 925px */
+    height: 37.18vw; /* 590px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboardImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
