@@ -40,6 +40,63 @@ export default function WidgetTestPage() {
         });
     }, []);
 
+    // Test API widget loading (simulates WordPress plugin behavior)
+    const testApiWidget = async () => {
+        const element = document.getElementById('widget-api-test');
+        if (!element) return;
+
+        try {
+            element.innerHTML = '<div style="padding: 20px; text-align: center;">🔄 Loading widget from API...</div>';
+
+            // Fetch the widget JavaScript from our API route
+            const response = await fetch('/api/widgets/hero');
+
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+            }
+
+            const widgetCode = await response.text();
+
+            // Execute the widget code (this is what WordPress plugin does)
+            const script = document.createElement('script');
+            script.textContent = widgetCode;
+            document.head.appendChild(script);
+
+            // Wait a moment for the script to execute
+            setTimeout(() => {
+                if (window.NextJSWidgets && window.NextJSWidgets.hero) {
+                    // Mount the widget with test props
+                    const testProps = {
+                        title: 'API Test - <span class="highlight">Hero</span> Widget',
+                        subtitle: 'This widget was loaded via API route (WordPress plugin style)',
+                        ctaText: 'API Loaded Button',
+                        rating: 4.9,
+                        consultantsLabel: 'API Test Consultants'
+                    };
+
+                    window.NextJSWidgets.hero.mount(element, testProps);
+                } else {
+                    throw new Error('Widget not found in global scope after loading');
+                }
+            }, 100);
+
+        } catch (error) {
+            console.error('API widget test failed:', error);
+            element.innerHTML = `
+                <div style="padding: 20px; border: 2px solid #dc3545; background: #f8d7da; border-radius: 8px;">
+                    <h3 style="color: #dc3545; margin: 0 0 10px 0;">❌ API Test Failed</h3>
+                    <p style="margin: 5px 0;">Error: ${error.message}</p>
+                    <p style="margin: 5px 0; font-size: 12px; color: #666;">Check browser console for details</p>
+                </div>
+            `;
+        }
+    };
+
+    // Make testApiWidget available globally for the button onclick
+    if (typeof window !== 'undefined') {
+        window.testApiWidget = testApiWidget;
+    }
+
     return (
         <>
             <div style={{ padding: '20px' }}>
@@ -77,11 +134,25 @@ export default function WidgetTestPage() {
                     </div>
                 </div>
 
+                <div style={{ marginBottom: '40px' }}>
+                    <h2>Test 5: API Route Test (WordPress Plugin Style)</h2>
+                    <div id="widget-api-test" style={{ border: '2px dashed #ccc', minHeight: '400px' }}>
+                        Loading widget from API...
+                    </div>
+                    <button
+                        onClick={() => testApiWidget()}
+                        style={{ marginTop: '10px', padding: '10px 20px', background: '#007cba', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}
+                    >
+                        Test API Widget Loading
+                    </button>
+                </div>
+
                 <div style={{ marginTop: '40px', padding: '20px', background: '#f5f5f5', borderRadius: '8px' }}>
                     <h3>Widget Testing Instructions</h3>
                     <ul>
                         <li>Test 1 shows the component rendered directly as a React component</li>
                         <li>Tests 2-4 show the component mounted using the mount function (WordPress-style)</li>
+                        <li>Test 5 shows loading the widget via API route (how WordPress plugin will work)</li>
                         <li>Each test uses different prop configurations to verify flexibility</li>
                         <li>Check browser console for any errors or warnings</li>
                         <li>Verify hot reloading works when you modify the component</li>
