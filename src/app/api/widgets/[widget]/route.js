@@ -2,11 +2,12 @@ import { NextResponse } from 'next/server';
 
 // Widget mapping to actual components
 const WIDGET_MAP = {
-  'hero': () => import('../../../sections/1-hero/hero.jsx'),
-  'strategy': () => import('../../../sections/3-strategy/strategy.jsx'),
-  'consume': () => import('../../../sections/4-consume/consume.jsx'),
-  'centralize': () => import('../../../sections/5-centralize/centralize.jsx'),
-  'contact': () => import('../../../sections/6-contact/contact.jsx')
+  'hero': () => import('../../../../sections/1-hero/hero.jsx'),
+  // Note: Other sections don't have mount functions yet, only hero is widget-ready
+  // 'strategy': () => import('../../../../sections/3-strategy/strategy.jsx'),
+  // 'consume': () => import('../../../../sections/4-consume/consume.jsx'),
+  // 'centralize': () => import('../../../../sections/5-centralize/centralize.jsx'),
+  // 'contact': () => import('../../../../sections/6-contact/contact.jsx')
 };
 
 export async function GET(request, { params }) {
