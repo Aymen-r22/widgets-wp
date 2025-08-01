@@ -45,28 +45,24 @@ export async function GET(request, { params }) {
         
         // For now, create a simple test mount
         // In production, you'd need to properly bundle React components
-        element.innerHTML = \`
-          <div style="padding: 20px; border: 2px solid #007cba; background: #f0f8ff; border-radius: 8px; margin: 10px 0;">
-            <h3 style="margin: 0 0 10px 0; color: #007cba;">✅ \${widget.toUpperCase()} Widget Loaded</h3>
-            <p style="margin: 5px 0;"><strong>Status:</strong> Successfully loaded from API</p>
-            <p style="margin: 5px 0;"><strong>Props received:</strong></p>
-            <pre style="background: #f9f9f9; padding: 10px; border-radius: 4px; font-size: 12px; overflow: auto;">\${JSON.stringify(props, null, 2)}</pre>
-            <p style="margin: 5px 0; font-size: 12px; color: #666;">
-              <strong>Note:</strong> This is a test mount. The actual React component would render here in production.
-            </p>
-          </div>
-        \`;
+        element.innerHTML = '<div style="padding: 20px; border: 2px solid #007cba; background: #f0f8ff; border-radius: 8px; margin: 10px 0;">' +
+          '<h3 style="margin: 0 0 10px 0; color: #007cba;">✅ ${widget.toUpperCase()} Widget Loaded</h3>' +
+          '<p style="margin: 5px 0;"><strong>Status:</strong> Successfully loaded from API</p>' +
+          '<p style="margin: 5px 0;"><strong>Props received:</strong></p>' +
+          '<pre style="background: #f9f9f9; padding: 10px; border-radius: 4px; font-size: 12px; overflow: auto;">' + JSON.stringify(props, null, 2) + '</pre>' +
+          '<p style="margin: 5px 0; font-size: 12px; color: #666;">' +
+          '<strong>Note:</strong> This is a test mount. The actual React component would render here in production.' +
+          '</p>' +
+          '</div>';
         
         console.log('${widget} widget mounted successfully');
       } catch (error) {
         console.error('Error mounting ${widget} widget:', error);
-        element.innerHTML = \`
-          <div style="padding: 20px; border: 2px solid #dc3545; background: #f8d7da; border-radius: 8px; margin: 10px 0;">
-            <h3 style="margin: 0 0 10px 0; color: #dc3545;">❌ Widget Mount Error</h3>
-            <p style="margin: 5px 0;">Failed to mount ${widget} widget</p>
-            <p style="margin: 5px 0; font-size: 12px; color: #666;">Error: \${error.message}</p>
-          </div>
-        \`;
+        element.innerHTML = '<div style="padding: 20px; border: 2px solid #dc3545; background: #f8d7da; border-radius: 8px; margin: 10px 0;">' +
+          '<h3 style="margin: 0 0 10px 0; color: #dc3545;">❌ Widget Mount Error</h3>' +
+          '<p style="margin: 5px 0;">Failed to mount ${widget} widget</p>' +
+          '<p style="margin: 5px 0; font-size: 12px; color: #666;">Error: ' + error.message + '</p>' +
+          '</div>';
       }
     }
   };
